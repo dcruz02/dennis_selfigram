@@ -14,6 +14,7 @@
 		9C5C03C520EDB59900660380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5C03C320EDB59900660380 /* LaunchScreen.storyboard */; };
 		9C5C03D020EDB59A00660380 /* SelfigramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C03CF20EDB59A00660380 /* SelfigramTests.swift */; };
 		9C5C03DB20EDB59A00660380 /* SelfigramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C03DA20EDB59A00660380 /* SelfigramUITests.swift */; };
+		9CB269CE20F4537300198360 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB269CD20F4537300198360 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9C5C03D620EDB59A00660380 /* SelfigramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfigramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5C03DA20EDB59A00660380 /* SelfigramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfigramUITests.swift; sourceTree = "<group>"; };
 		9C5C03DC20EDB59A00660380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CB269CD20F4537300198360 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				9C5C03BA20EDB59800660380 /* AppDelegate.swift */,
 				9C5C03BC20EDB59800660380 /* ViewController.swift */,
 				9C5C03BE20EDB59800660380 /* Main.storyboard */,
+				9CB269CD20F4537300198360 /* ProfileViewController.swift */,
 				9C5C03C120EDB59900660380 /* Assets.xcassets */,
 				9C5C03C320EDB59900660380 /* LaunchScreen.storyboard */,
 				9C5C03C620EDB59900660380 /* Info.plist */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB269CE20F4537300198360 /* ProfileViewController.swift in Sources */,
 				9C5C03BD20EDB59800660380 /* ViewController.swift in Sources */,
 				9C5C03BB20EDB59800660380 /* AppDelegate.swift in Sources */,
 			);
