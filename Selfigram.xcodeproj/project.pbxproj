@@ -15,6 +15,8 @@
 		9C5C03D020EDB59A00660380 /* SelfigramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C03CF20EDB59A00660380 /* SelfigramTests.swift */; };
 		9C5C03DB20EDB59A00660380 /* SelfigramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C03DA20EDB59A00660380 /* SelfigramUITests.swift */; };
 		9CB269CE20F4537300198360 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB269CD20F4537300198360 /* ProfileViewController.swift */; };
+		9CEFF2B320F7066000C42BB3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFF2B220F7066000C42BB3 /* User.swift */; };
+		9CEFF2B520F7077B00C42BB3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFF2B420F7077B00C42BB3 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		9C5C03DA20EDB59A00660380 /* SelfigramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfigramUITests.swift; sourceTree = "<group>"; };
 		9C5C03DC20EDB59A00660380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB269CD20F4537300198360 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9CEFF2B220F7066000C42BB3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9CEFF2B420F7077B00C42BB3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				9C5C03BA20EDB59800660380 /* AppDelegate.swift */,
 				9C5C03BC20EDB59800660380 /* ViewController.swift */,
 				9C5C03BE20EDB59800660380 /* Main.storyboard */,
+				9CEFF2B220F7066000C42BB3 /* User.swift */,
+				9CEFF2B420F7077B00C42BB3 /* Post.swift */,
 				9CB269CD20F4537300198360 /* ProfileViewController.swift */,
 				9C5C03C120EDB59900660380 /* Assets.xcassets */,
 				9C5C03C320EDB59900660380 /* LaunchScreen.storyboard */,
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEFF2B320F7066000C42BB3 /* User.swift in Sources */,
 				9CB269CE20F4537300198360 /* ProfileViewController.swift in Sources */,
 				9C5C03BD20EDB59800660380 /* ViewController.swift in Sources */,
 				9C5C03BB20EDB59800660380 /* AppDelegate.swift in Sources */,
+				9CEFF2B520F7077B00C42BB3 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
