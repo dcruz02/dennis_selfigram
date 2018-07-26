@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var profileImageView: UIImageView!
@@ -17,6 +18,24 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         //    This dictionary contains multiple things that maybe useful to us.
         //    We are getting an image from the UIImagePickerControllerOriginalImage key in that dictionary
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            // setting the compression quality to 90%
+            if let imageData = UIImageJPEGRepresentation(image, 0.9),
+            let imageFile = PFFile(data:imageData),
+            let user = PFUser.current(){
+                
+                user["avatarImage"] = imageFile
+                user.saveInBackground(block: { (success, error) -> Void in
+                    
+                    if success {
+                        
+                        print("avatarImage successfully saved")
+                        let image = UIImage(data: imageData)
+                        self.profileImageView.image = image
+                    }
+                    
+                })
+            }
             
             //2. To our imageView, we set the image property to be the image the user has chosen
             profileImageView.image = image
@@ -65,6 +84,23 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         usernameLabel.text = "yourName"
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let user = PFUser.current() {
+            usernameLabel.text = user.username
+            
+            if let imageFile = user["avatarImage"] as? PFFile {
+                
+                imageFile.getDataInBackground(block: { (data, error) -> Void in
+                    if let imageData = data {
+                        self.profileImageView.image = UIImage(data: imageData)
+                    }
+                })
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -116,22 +117,58 @@
             </objects>
             <point key="canvasLocation" x="816.79999999999995" y="-789.35532233883066"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Feed Table View Controller-->
         <scene sceneID="30R-AD-ChC">
             <objects>
-                <tableViewController id="0KF-Ae-Taf" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yaz-A6-ETy">
+                <tableViewController id="0KF-Ae-Taf" customClass="feedTableViewController" customModule="Selfigram" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="320" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yaz-A6-ETy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JGx-dm-v6G">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="selfieCell" rowHeight="320" id="JGx-dm-v6G" customClass="selfieCellTableViewCell" customModule="Selfigram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JGx-dm-v6G" id="Xir-6b-bsq">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="319.66666666666669"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0gW-zm-zGC">
+                                            <rect key="frame" x="20" y="11" width="374" height="250"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="250" id="YiH-9v-XUc"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baX-uv-0cU">
+                                            <rect key="frame" x="20" y="298" width="394" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIC-vD-M8y">
+                                            <rect key="frame" x="20" y="269" width="374" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0gW-zm-zGC" firstAttribute="top" secondItem="Xir-6b-bsq" secondAttribute="topMargin" id="0W8-Vt-w3I"/>
+                                        <constraint firstAttribute="trailing" secondItem="baX-uv-0cU" secondAttribute="trailing" id="0vO-Zk-Z8J"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cIC-vD-M8y" secondAttribute="trailing" id="6n5-w9-bxp"/>
+                                        <constraint firstItem="baX-uv-0cU" firstAttribute="top" secondItem="cIC-vD-M8y" secondAttribute="bottom" constant="8" id="8BN-Nb-s5w"/>
+                                        <constraint firstItem="cIC-vD-M8y" firstAttribute="leading" secondItem="Xir-6b-bsq" secondAttribute="leading" constant="20" id="9uO-Ej-WIJ"/>
+                                        <constraint firstItem="baX-uv-0cU" firstAttribute="leading" secondItem="Xir-6b-bsq" secondAttribute="leading" constant="20" id="FTH-YD-tyj"/>
+                                        <constraint firstItem="cIC-vD-M8y" firstAttribute="top" secondItem="0gW-zm-zGC" secondAttribute="bottom" constant="8" id="ezp-ZR-3k2"/>
+                                        <constraint firstItem="0gW-zm-zGC" firstAttribute="leading" secondItem="Xir-6b-bsq" secondAttribute="leadingMargin" id="i2N-4i-SVw"/>
+                                        <constraint firstItem="0gW-zm-zGC" firstAttribute="trailing" secondItem="Xir-6b-bsq" secondAttribute="trailingMargin" id="kCJ-YJ-i65"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentLabel" destination="baX-uv-0cU" id="P86-qO-k9U"/>
+                                    <outlet property="selfieImageView" destination="0gW-zm-zGC" id="DQj-TK-KeW"/>
+                                    <outlet property="usernameLabel" destination="cIC-vD-M8y" id="TvM-ar-CZh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -139,7 +176,14 @@
                             <outlet property="delegate" destination="0KF-Ae-Taf" id="37I-4b-iyQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ng6-Lb-Hrt"/>
+                    <navigationItem key="navigationItem" id="Ng6-Lb-Hrt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="gYX-nK-PM3">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cameraButtonPressed:" destination="0KF-Ae-Taf" id="T3M-Ey-eu6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqg-Oi-UeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
