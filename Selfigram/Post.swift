@@ -8,17 +8,38 @@
 
 import Foundation
 import UIKit
+import Parse
 
-class Post {
+class Post: PFObject, PFSubclassing {
     
-    let imageURL: URL
-    let user: User
-    let comment: String
+//    let imageURL: URL
+//    let user: User
+//    let comment: String
     
-    init(imageInp: URL, userInp: User, commentInp: String) {
-        imageURL = imageInp
-        user = userInp
-        comment = commentInp
+    @NSManaged var image:PFFile
+    @NSManaged var user:PFUser
+    @NSManaged var comment:String
+    
+//    init(imageInp: URL, userInp: User, commentInp: String) {
+//        imageURL = imageInp
+//        user = userInp
+//        comment = commentInp
+//    }
+    
+    static func parseClassName() -> String {
+        // sets what the table name on Parse will be called
+        return "Post"
+    }
+    
+    // convenience init method, because it’s building on top of PFObject’s init, rather than overriding it.
+    convenience init(image:PFFile, user:PFUser, comment:String){
+        // You can name the property you are passing into the function the
+        // same name as the class' property. To distinguish the two
+        // add "self." to the beginning of the class' property.
+        self.init()
+        self.image = image
+        self.user = user
+        self.comment = comment
     }
     
 }
