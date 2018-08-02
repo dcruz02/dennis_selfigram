@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Selfigram/feedTableViewController.swift"
-            timestampString = "554697212.058753"
+            timestampString = "554869887.817763"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "feedTableViewController"
             landmarkType = "3">
          </BreakpointContent>

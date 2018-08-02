@@ -18,6 +18,7 @@
 		9C5C03DB20EDB59A00660380 /* SelfigramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C03DA20EDB59A00660380 /* SelfigramUITests.swift */; };
 		9C94987F21002C1B00634864 /* selfieCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C94987E21002C1B00634864 /* selfieCellTableViewCell.swift */; };
 		9CB269CE20F4537300198360 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB269CD20F4537300198360 /* ProfileViewController.swift */; };
+		9CCBD52021129B0B00266398 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCBD51F21129B0B00266398 /* Activity.swift */; };
 		9CCC659F20FD88F700C55021 /* feedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC659E20FD88F700C55021 /* feedTableViewController.swift */; };
 		9CEFF2B320F7066000C42BB3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFF2B220F7066000C42BB3 /* User.swift */; };
 		9CEFF2B520F7077B00C42BB3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFF2B420F7077B00C42BB3 /* Post.swift */; };
@@ -61,6 +62,7 @@
 		9C5C03DC20EDB59A00660380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C94987E21002C1B00634864 /* selfieCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selfieCellTableViewCell.swift; sourceTree = "<group>"; };
 		9CB269CD20F4537300198360 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9CCBD51F21129B0B00266398 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		9CCC659E20FD88F700C55021 /* feedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedTableViewController.swift; sourceTree = "<group>"; };
 		9CEFF2B220F7066000C42BB3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CEFF2B420F7077B00C42BB3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				9C5C03BA20EDB59800660380 /* AppDelegate.swift */,
 				9C5C03BC20EDB59800660380 /* ViewController.swift */,
 				9C5C03BE20EDB59800660380 /* Main.storyboard */,
+				9CCBD51F21129B0B00266398 /* Activity.swift */,
 				9C94987E21002C1B00634864 /* selfieCellTableViewCell.swift */,
 				9CEFF2B220F7066000C42BB3 /* User.swift */,
 				9CEFF2B420F7077B00C42BB3 /* Post.swift */,
@@ -398,6 +401,7 @@
 				9C94987F21002C1B00634864 /* selfieCellTableViewCell.swift in Sources */,
 				9CCC659F20FD88F700C55021 /* feedTableViewController.swift in Sources */,
 				9C5C03BB20EDB59800660380 /* AppDelegate.swift in Sources */,
+				9CCBD52021129B0B00266398 /* Activity.swift in Sources */,
 				9CEFF2B520F7077B00C42BB3 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
